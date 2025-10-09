@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris Adrian Cuenca — Portfolio</title>
+  <meta name="description" content="Portfolio of a Computer Science graduate — projects, skills, contact." />
+  <link rel="stylesheet" href="CV.css">
+</head>
+    <script>
+  // Add "scrolled" class when user scrolls down for subtle effect
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">IAN</div>
+        <div>
+          <div style="font-weight:700">Chris Adrian Cuenca</div>
+          <div class="small muted">Computer Science • Web & System Dev</div>
+        </div>
+      </div>
+
+      <nav>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+          <a class="cta" href="#contact">Hire me</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card intro">
+        <h1>Hi — I'm <span style="color:var(--accent)">Chris Adrian Cuenca</span></h1>
+        <p class="muted">Recent Computer Science graduate building practical web apps, dashboards, and data-driven tools. I love clean code and real-world impact.</p>
+
+        <div class="badges">
+          <div class="badge">Web Development</div>
+          <div class="badge">Frontend Development</div>
+          <div class="badge">Backend Development</div>
+          <div class="badge">UI/UX Design</div>
+          <div class="badge">Responsive Design</div>
+          <div class="badge">CMS (WordPress)</div>
+          <div class="badge">Microsoft Access</div>
+        </div>
+
+        <hr style="margin:16px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)"/>
+
+        <h3 style="margin-bottom:8px">Featured Projects</h3>
+        <div class="projects-grid" id="featured">
+          <!-- Replace these cards with your project info or let the JS auto-render -->
+          <div class="project">
+            <h3>MNL Inc. Centralized System</h3>
+            <p class="muted">A web-based system for managing operations, dashboards, and attendance (Flask + React + MySQL).</p>
+            <div class="project-links">
+            </div>
+          </div>
+
+          <div class="project">
+            <h3>Urban Pages</h3>
+            <p class="muted">It allows efficient tracking of borrowed and returned books for small-scale library operations (MS Access).</p>
+            <div class="project-links">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card profile-card">
+      <a href="https://www.linkedin.com/in/chris-adrian-cuenca-758281389" target="_blank">
+      <img 
+        src="images/profile.jpg" 
+        alt="Chris Adrian Cuenca" 
+        style="width:100px;height:100px;border-radius:50%;object-fit:cover;"/> </a>
+          
+        <div style="font-weight:700">Chris Adrian Cuenca</div>
+        <div class="small muted">Computer Science • Developer</div>
+        <div style="width:100%">
+          <div style="display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-top:10px">
+            <div>
+              <div style="font-weight:700">Location</div>
+              <div class="muted">Bacoor City, Cavite, <br>Philippines</div>
+            </div>
+            <div>
+              <div style="font-weight:700">Email</div>
+              <div class="muted">iancuenca94@gmail.com</div>
+            </div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)"/>
+
+          <div style="display:flex;gap:8px;justify-content:center">
+            <a class="link" href="https://github.com/psydrian18" target="_blank">GitHub</a>
+            <a class="link" href="www.linkedin.com/in/chris-adrian-cuenca-758281389" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+    
+
+ <section id="about" class="card" style="margin-bottom:18px;">
+  <h2 style="margin-top:0;">About</h2>
+  <p class="muted" style="text-align:justify; line-height:1.6;">
+    I am a hardworking Computer Science graduate with hands-on experience in developing web-based systems and interactive dashboards. 
+    During my internship, I managed and enhanced the company’s website using WordPress, which strengthened my technical and problem-solving skills. 
+    In our thesis project, my team and I successfully developed a centralized data system designed to streamline company operations by integrating employee management, task tracking, and data analytics.
+    <br><br>
+    Aside from academic projects, I also gained practical experience by creating customized systems for small businesses while freelancing during college. 
+    These experiences allowed me to understand client needs, apply effective solutions, and deliver user-friendly systems that improve efficiency.
+    <br><br>
+    I am eager to apply my skills in the industry where I can contribute to impactful projects, help organizations achieve their goals, and continue expanding my knowledge. 
+    I am a fast learner, dedicated, and always open to new challenges that will help me grow both personally and professionally.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="card" style="margin-bottom:18px; text-align:center;">
+  <h2 style="margin-top:0;margin-bottom:12px">Skills</h2>
+
+  <!-- Skill Cards -->
+  <div class="skills-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Programming & Development</h3>
+      <p class="muted" style="font-size:13px">
+        Java, Python, JavaScript, HTML, CSS, React.js, Vue.js<br>
+        Strong foundation in algorithms, data structures, and object-oriented programming.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Web Development & CMS</h3>
+      <p class="muted" style="font-size:13px">
+        Experienced in WordPress (RankMath SEO, Elementor), with knowledge of back-end integration for responsive systems.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">UI/UX & Design Tools</h3>
+      <p class="muted" style="font-size:13px">
+        Familiar with Figma, Canva, Wix, and Adobe Photoshop for web design, prototypes, and graphic editing.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Database Management</h3>
+      <p class="muted" style="font-size:13px">
+        Knowledgeable in SQL and Microsoft Access for efficient data storage, retrieval, and database design.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Software Tools</h3>
+      <p class="muted" style="font-size:13px">
+        Skilled in Microsoft Word and Excel for documentation and data analysis.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Quality Assurance & Debugging</h3>
+      <p class="muted" style="font-size:13px">
+        Proficient in manual testing, test case design, regression testing, defect tracking, and troubleshooting coding errors.
+      </p>
+    </div>
+
+    <div class="skill-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:var(--radius)">
+      <h3 style="margin-top:0;margin-bottom:6px;font-size:15px;color:var(--accent)">Media Editing</h3>
+      <p class="muted" style="font-size:13px">
+        Experienced in Canva (graphics) and CapCut (video editing) for content creation.
+      </p>
+    </div>
+  </div>
+
+  <!-- Logos Floating Below -->
+  <div class="skill-logos" style="margin-top:24px; display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
+    <img src="skills/html.png" alt="HTML" class="logo-icon">
+    <img src="skills/css.png" alt="CSS" class="logo-icon">
+    <img src="skills/js.png" alt="JavaScript" class="logo-icon">
+    <img src="skills/python.png" alt="Python" class="logo-icon">
+    <img src="skills/java.png" alt="Java" class="logo-icon">
+    <img src="skills/react.png" alt="React.js" class="logo-icon">
+    <img src="skills/sql.png" alt="SQL" class="logo-icon">
+    <img src="skills/php.png" alt="PHP" class="logo-icon">
+    <img src="skills/figma.png" alt="Figma" class="logo-icon">
+    <img src="skills/wordpress.png" alt="WordPress" class="logo-icon">
+    <img src="skills/access.png" alt="Access" class="logo-icon">
+    <img src="skills/canva.png" alt="Canva" class="logo-icon">
+    <img src="skills/capcut.png" alt="Capcut" class="logo-icon">
+  </div>
+</section>
+    
+<!-- PROJECTS -->
+<section id="projects" class="card projects-section" >
+  <h2>Projects</h2>
+  <div class="projects-grid">
+
+    <!-- SweeteaFry -->
+    <div class="project-card">
+      <img src="images/sweetea.png" alt="SweeteaFry Project Screenshot" class="project-image" />
+      <div class="project-content">
+        <h3>SweeteaFry</h3>
+        <p class="muted">
+          SweeteaFry System is a business website for SweeteaFry that showcases an updated digital menu with prices, flavor options, and add-ons. 
+          It also provides customers with store details such as operating hours, contact information, and location for easy access.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+
+    <!-- MNL Inc. Centralized System -->
+    <div class="project-card">
+      <img src="images/mnl.png" alt="MNL Inc. System Screenshot" class="project-image" />
+      <div class="project-content">
+        <h3>MNL Inc. Centralized System</h3>
+        <p class="muted">
+          A web-based centralized data system designed for MNL Inc. to streamline operations across departments 
+          including HR, Accounting, CME, Admin, and Site Acquisition. It enables real-time tracking, 
+          department-specific dashboards, and secure data management.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> React.js (Frontend), Flask (Backend), MySQL (Database)</p>
+      </div>
+    </div>
+
+    <!-- Library Management System -->
+    <div class="project-card">
+      <img src="images/urbanpages.png" alt="Library Management System Screenshot" class="project-image" />
+      <div class="project-content">
+        <h3>Urban Pages</h3>
+        <p class="muted">
+          A database-driven system developed using Microsoft Access to manage book records, borrower information, and 
+          transaction logs. It allows efficient tracking of borrowed and returned books for small-scale library operations.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> Microsoft Access</p>
+      </div>
+    </div>
+
+    <!-- Simple Java Game -->
+    <div class="project-card">
+      <img src="images/javagame.png" alt="Java Game Screenshot" class="project-image" />
+      <div class="project-content">
+        <h3>Guess the word</h3>
+        <p class="muted">
+          A fun and interactive mini-game developed in Java using object-oriented programming principles. 
+          It features basic animations, score tracking, and simple logic for user engagement and learning experience.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> Java</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="card education-section" style="margin-bottom:18px;">
+  <h2>Education</h2>
+  <div class="education-grid">
+    <div class="education-item">
+      <h3>Bachelor of Science in Computer Science</h3>
+      <p class="school">Asian Institute of Science and Technology (AISAT), City of Dasmariñas, Cavite</p>
+      <p class="years">2021 – 2025</p>
+    </div>
+
+    <div class="education-item">
+      <h3>Senior High School – ICT Strand (MAWD: Mobile App & Web Development)</h3>
+      <p class="school">STI College, Bacoor City, Cavite</p>
+      <p class="years">2019 – 2021</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements" class="card achievements-section" style="margin-bottom:18px;">
+  <h2>Achievements</h2>
+  <ul class="achievements-list">
+    <li><strong>Champion – Website Development Competition (2020)</strong> | Recognized for excellence in web design and functionality, STI Bacoor</li>
+    <li><strong>Developed POS-Integrated Website (2019)</strong> | Built a functional website for SweeteaFry Milktea with a user-friendly interface</li>
+    <li><strong>Graduated with Honors (2021)</strong> | STI College Bacoor, Senior High School</li>
+    <li><strong>Dean’s List (2022–2024)</strong> | Consistently recognized for academic excellence, AISAT</li>
+    <li><strong>Completed OJT at MNL Inc. (2025)</strong> | Contributed to website updates, tracker management, and system improvements</li>
+    <li><strong>Silver Award – Thesis Project (2025)</strong> | Recognized for innovative centralized data system for telecom contractor operations</li>
+  </ul>
+</section>
+      
+</div>
+</body>
+
+<footer id="contact" class="footer-section">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Contact Me</h3>
+      <p class="muted">
+        I’m open to job opportunities where I can apply my skills and continue growing as a developer.
+        Feel free to reach out through the details.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-info">
+        <div><strong>Email:</strong> <a href="mailto:iancuenca94@gmail.com" class="external">iancuenca94@gmail.com</a></div>
+        <div><strong>Phone:</strong> +63 947 177 9943</div>
+        <div><strong>Location:</strong> Bacoor City, Cavite, Philippines</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Chris Adrian Cuenca. All rights reserved.</p>
+  </div>
+</footer>
+      
+
+
+
+          
