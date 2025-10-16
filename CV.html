@@ -25,18 +25,18 @@
         <div class="logo">IAN</div>
         <div>
           <div style="font-weight:700">Chris Adrian Cuenca</div>
-          <div class="small muted">Computer Science • Web & System Dev</div>
+          <div class="small muted">Web Developer</div>
         </div>
       </div>
 
       <nav>
           <a href="#about">About</a>
+          <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#achievements">Achievements</a>
-          <a href="#contact">Contact</a>
-          <a class="cta" href="#contact">Hire me</a>
+          <a class="cta" href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -62,14 +62,14 @@
           <!-- Replace these cards with your project info or let the JS auto-render -->
           <div class="project">
             <h3>MNL Inc. Centralized System</h3>
-            <p class="muted">A web-based system for managing operations, dashboards, and attendance (Flask + React + MySQL).</p>
+            <p class="muted">A web-based system for managing operations, dashboards, and attendance <br><br><b> (Flask + React + MySQL).</b></p>
             <div class="project-links">
             </div>
           </div>
 
           <div class="project">
-            <h3>Urban Pages</h3>
-            <p class="muted">It allows efficient tracking of borrowed and returned books for small-scale library operations (MS Access).</p>
+            <h3>SweeteaFry</h3>
+            <p class="muted">It provides customers with store details such as operating hours, contact information, and location for easy access <br><br><b>(HTML, CSS, JavaScript).</b></p>
             <div class="project-links">
             </div>
           </div>
@@ -101,7 +101,7 @@
 
           <div style="display:flex;gap:8px;justify-content:center">
             <a class="link" href="https://github.com/psydrian18" target="_blank">GitHub</a>
-            <a class="link" href="www.linkedin.com/in/chris-adrian-cuenca-758281389" target="_blank">LinkedIn</a>
+            <a class="link" href="https://www.linkedin.com/in/chris-adrian-cuenca-758281389/" target="_blank">LinkedIn</a>
           </div>
         </div>
       </aside>
@@ -197,6 +197,54 @@
     <img src="skills/capcut.png" alt="Capcut" class="logo-icon">
   </div>
 </section>
+      
+<!-- EXPERIENCE -->
+<section id="experience" class="card experience-section" style="margin-bottom:18px;">
+  <h2>Experience</h2>
+
+  <div class="experience-grid" style="display:flex; flex-wrap:wrap; gap:24px;">
+
+    <!-- IT Support Intern -->
+    <div class="experience-card" style="display:flex; background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); padding:20px; border-radius:var(--radius); align-items:flex-start; gap:24px; flex:1 1 600px;">
+      
+      <!-- Image of You -->
+      <div class="experience-image" style="flex-shrink:0;">
+        <img src="images/experience.jpg" alt="Chris Adrian Cuenca at work" 
+             style="width:200px; height:auto; object-fit:cover; border-radius:12px;">
+      </div>
+
+      <!-- Experience Details -->
+<div class="experience-content" style="flex:1; display:flex; flex-direction:column; gap:12px;">
+  <h3 style="margin:0; font-size:20px; color:var(--accent);">IT Support Intern</h3>
+  
+  <div style="display:flex; justify-content:space-between; align-items:center; font-size:14px; color:var(--muted);">
+    <span style="font-weight:600;">MNL Inc. – Telecom Contractor, Bacoor City, Cavite <br>December 2024 – March 2025</span>
+  </div>
+
+  <ul style="padding-left:20px; margin:0; list-style-type:none; display:flex; flex-direction:column; gap:8px;">
+    <li style="position:relative; padding-left:20px;">
+      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
+      Assisted in managing and updating company trackers to support daily operations.
+    </li>
+    <li style="position:relative; padding-left:20px;">
+      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
+      Handled website updates and maintenance using <b>WordPress.</b>
+    </li>
+    <li style="position:relative; padding-left:20px;">
+      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
+      Provided IT support by troubleshooting software, hardware, and network issues.
+    </li>
+    <li style="position:relative; padding-left:20px;">
+      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
+      Collaborated with staff to improve system efficiency and ensure smooth operations.
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+  </div>
+</section>
     
 <!-- PROJECTS -->
 <section id="projects" class="card projects-section" >
@@ -229,8 +277,8 @@
         <p class="tech"><strong>Technologies Used:</strong> React.js (Frontend), Flask (Backend), MySQL (Database)</p>
       </div>
     </div>
-
-    <!-- MNL Inc. Official Website -->
+      
+     <!-- MNL Inc. Official Website -->
     <div class="project-card">
       <img src="images/mnlinc.png" alt="MNL Inc. Official Website Screenshot" class="project-image" />
       <div class="project-content">
@@ -269,8 +317,8 @@
         <p class="tech"><strong>Technologies Used:</strong> Java</p>
       </div>
     </div>
-
-        <!-- MediCore -->
+      
+    <!-- MediCore -->
     <div class="project-card">
       <img src="images/medicore.png" alt="MediCore App Prototype Screenshot" class="project-image" />
       <div class="project-content">
@@ -278,8 +326,7 @@
         <p class="muted">
           A mobile UI/UX design prototype built in Figma that allows users to list and organize their medicines, 
           rate which works best for them, and easily contact a doctor for consultations. The design focuses on 
-          accessibility, clean navigation, and user-centered functionality. <br>
-          Visit the prototype at <a href="https://www.figma.com/proto/Bz0fUK2884eVTthkNTQ9OH/MediCore?node-id=407-130&t=hY7DXWY0ljtZbiqo-1" target="_blank">MediCore</a>.
+          accessibility, clean navigation, and user-centered functionality.
         </p>
         <p class="tech"><strong>Technologies Used:</strong> Figma (UI/UX Design, Interactive Prototype)</p>
       </div>
@@ -291,17 +338,22 @@
 <!-- EDUCATION -->
 <section id="education" class="card education-section" style="margin-bottom:18px;">
   <h2>Education</h2>
-  <div class="education-grid">
-    <div class="education-item">
-      <h3>Bachelor of Science in Computer Science</h3>
-      <p class="school">Asian Institute of Science and Technology (AISAT), City of Dasmariñas, Cavite</p>
-      <p class="years">2021 – 2025</p>
+  <div class="education-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;">
+
+    <!-- Bachelor's Degree -->
+    <div class="education-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); padding:16px; border-radius:var(--radius); text-align:center;">
+      <img src="images/aisat-logo.png" alt="AISAT Logo" style="width:100px; height:60px; object-fit:contain; margin-bottom:12px;">
+      <h3 style="margin-top:0; margin-bottom:6px;">Bachelor of Science in Computer Science</h3>
+      <p class="school" style="font-size:14px; margin:4px 0;">Asian Institute of Science and Technology (AISAT), City of Dasmariñas, Cavite</p>
+      <p class="years" style="font-size:13px; color:var(--muted);">2021 – 2025</p>
     </div>
 
-    <div class="education-item">
-      <h3>Senior High School – ICT Strand (MAWD: Mobile App & Web Development)</h3>
-      <p class="school">STI College, Bacoor City, Cavite</p>
-      <p class="years">2019 – 2021</p>
+    <!-- Senior High School -->
+    <div class="education-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); padding:16px; border-radius:var(--radius); text-align:center;">
+      <img src="images/sti-logo.png" alt="STI College Logo" style="width:100px; height:60px; object-fit:contain; margin-bottom:12px;">
+      <h3 style="margin-top:0; margin-bottom:6px;">Senior High School – ICT Strand</h3>
+      <p class="school" style="font-size:14px; margin:4px 0;">STI College, Bacoor City, Cavite</p>
+      <p class="years" style="font-size:13px; color:var(--muted);">2019 – 2021</p>
     </div>
   </div>
 </section>
@@ -310,8 +362,8 @@
 <section id="achievements" class="card achievements-section" style="margin-bottom:18px;">
   <h2>Achievements</h2>
   <ul class="achievements-list">
-    <li><strong>Champion – Website Development Competition (2020)</strong> | Recognized for excellence in web design and functionality, STI Bacoor</li>
     <li><strong>Developed POS-Integrated Website (2019)</strong> | Built a functional website for SweeteaFry Milktea with a user-friendly interface</li>
+    <li><strong>Champion – Website Development Competition (2020)</strong> | Recognized for excellence in web design and functionality, STI Bacoor</li>
     <li><strong>Graduated with Honors (2021)</strong> | STI College Bacoor, Senior High School</li>
     <li><strong>Dean’s List (2022–2024)</strong> | Consistently recognized for academic excellence, AISAT</li>
     <li><strong>Completed OJT at MNL Inc. (2025)</strong> | Contributed to website updates, tracker management, and system improvements</li>
@@ -320,6 +372,7 @@
 </section>
       
 </div>
+
 </body>
 
 <footer id="contact" class="footer-section">
@@ -350,8 +403,3 @@
 
 
           
-
-
-
-
-
