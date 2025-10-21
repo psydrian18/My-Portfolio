@@ -7,7 +7,7 @@
   <meta name="description" content="Portfolio of a Computer Science graduate — projects, skills, contact." />
   <link rel="stylesheet" href="CV.css">
 </head>
-    <script>
+<script>
   // Header scroll effect
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
@@ -84,6 +84,25 @@
   startAutoSlide();
 });
 
+  // BACKTOTOP   
+  document.addEventListener("DOMContentLoaded", () => {
+  const backToTop = document.getElementById('backToTop');
+
+  // Show button after scrolling down 200px
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll to top
+  backToTop.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
 </script>
 <body>
   <div class="wrap">
@@ -490,10 +509,12 @@
     <li><strong>Completed OJT at MNL Inc. (2025)</strong> | Contributed to website updates, tracker management, and system improvements</li>
     <li><strong>Silver Award – Thesis Project (2025)</strong> | Recognized for innovative centralized data system for telecom contractor operations</li>
   </ul>
-</section>
-      
+</section> 
 </div>
-
+<!-- Back to Top Button -->
+<a href="#" id="backToTop">
+  <img src="images/backtop.gif" alt="Back to Top" />
+</a>
 </body>
 
 <footer id="contact" class="footer-section">
