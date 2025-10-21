@@ -595,6 +595,29 @@ nav .cta:hover {
   color: var(--accent);
 }
 
+/* Back to top */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+}
+
+#backToTop img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+#backToTop:hover img {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
 
 
 .footer-section {
