@@ -68,6 +68,133 @@ nav a:hover { color: #fff; }
 .skill-card h3 { margin-top: 0; margin-bottom: 6px; font-size: 15px; color: var(--accent); }
 .skill-card p { color: var(--muted); font-size: 13px; }
 
+/* Experience */
+/* EXPERIENCE SECTION */
+.experience-section {
+  margin-bottom: 18px;
+  padding: 20px;
+}
+
+.experience-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* GRID LAYOUT */
+.experience-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* CARD DESIGN */
+.experience-card {
+  display: flex;
+  flex: 1 1 600px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+  padding: 20px;
+  border-radius: var(--radius);
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* IMAGE */
+.experience-image img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* CONTENT */
+.experience-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--accent);
+}
+
+.experience-meta {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+/* LIST STYLES */
+.experience-content ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience-content li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.experience-content li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience-image img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .experience-content h3 {
+    font-size: 18px;
+  }
+
+  .experience-meta {
+    font-size: 13px;
+  }
+
+  .experience-content ul {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-section h2 {
+    font-size: 1.4rem;
+  }
+
+  .experience-card {
+    padding: 16px;
+  }
+
+  .experience-content h3 {
+    font-size: 16px;
+  }
+}
+
+
+
 /* Contact */
 .contact-form { display: flex; flex-direction: column; gap: 10px; }
 input, textarea { background: transparent; border: 1px solid rgba(255,255,255,0.06); padding: 10px; border-radius: 8px; color: #e6eef6; }
@@ -144,6 +271,70 @@ button:hover {
   text-align: left;
   min-width: 250px;
 }
+
+/* Photo Gallery */
+.gallery-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Navigation Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
+    
+}
+
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .carousel-slide img {
+    height: 250px;
+  }
+}
+
 
 /* Contact info */
 .contact-info {
