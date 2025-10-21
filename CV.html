@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="CV.css">
 </head>
     <script>
-  // Add "scrolled" class when user scrolls down for subtle effect
+  // Header scroll effect
   window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 10) {
@@ -16,6 +16,35 @@
     } else {
       header.classList.remove('scrolled');
     }
+  });
+
+  // PHOTO GALLERY CAROUSEL SCRIPT
+  document.addEventListener("DOMContentLoaded", () => {
+    const carouselSlide = document.querySelector(".carousel-slide");
+    const carouselImages = document.querySelectorAll(".carousel-slide img");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    let counter = 0;
+
+    function updateCarousel() {
+      carouselSlide.style.transform = `translateX(${-counter * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      counter = (counter + 1) % carouselImages.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      counter = (counter - 1 + carouselImages.length) % carouselImages.length;
+      updateCarousel();
+    });
+
+    // Auto slide every 4 seconds
+    setInterval(() => {
+      counter = (counter + 1) % carouselImages.length;
+      updateCarousel();
+    }, 4000);
   });
 </script>
 <body>
@@ -199,52 +228,38 @@
 </section>
       
 <!-- EXPERIENCE -->
-<section id="experience" class="card experience-section" style="margin-bottom:18px;">
+<section id="experience" class="experience-section card">
   <h2>Experience</h2>
 
-  <div class="experience-grid" style="display:flex; flex-wrap:wrap; gap:24px;">
+  <div class="experience-grid">
 
     <!-- IT Support Intern -->
-    <div class="experience-card" style="display:flex; background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); padding:20px; border-radius:var(--radius); align-items:flex-start; gap:24px; flex:1 1 600px;">
+    <div class="experience-card">
       
       <!-- Image of You -->
-      <div class="experience-image" style="flex-shrink:0;">
-        <img src="images/experience.jpg" alt="Chris Adrian Cuenca at work" 
-             style="width:200px; height:auto; object-fit:cover; border-radius:12px;">
+      <div class="experience-image">
+        <img src="images/experience.jpg" alt="Chris Adrian Cuenca at work">
       </div>
 
       <!-- Experience Details -->
-<div class="experience-content" style="flex:1; display:flex; flex-direction:column; gap:12px;">
-  <h3 style="margin:0; font-size:20px; color:var(--accent);">IT Support Intern</h3>
-  
-  <div style="display:flex; justify-content:space-between; align-items:center; font-size:14px; color:var(--muted);">
-    <span style="font-weight:600;">MNL Inc. – Telecom Contractor, Bacoor City, Cavite <br>December 2024 – March 2025</span>
-  </div>
+      <div class="experience-content">
+        <h3>IT Support Intern</h3>
+        <div class="experience-meta">
+          <span>MNL Inc. – Telecom Contractor, Bacoor City, Cavite<br>December 2024 – March 2025</span>
+        </div>
 
-  <ul style="padding-left:20px; margin:0; list-style-type:none; display:flex; flex-direction:column; gap:8px;">
-    <li style="position:relative; padding-left:20px;">
-      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
-      Assisted in managing and updating company trackers to support daily operations.
-    </li>
-    <li style="position:relative; padding-left:20px;">
-      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
-      Handled website updates and maintenance using <b>WordPress.</b>
-    </li>
-    <li style="position:relative; padding-left:20px;">
-      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
-      Provided IT support by troubleshooting software, hardware, and network issues.
-    </li>
-    <li style="position:relative; padding-left:20px;">
-      <span style="position:absolute; left:0; top:3px; width:8px; height:8px; background:var(--accent); border-radius:50%;"></span>
-      Collaborated with staff to improve system efficiency and ensure smooth operations.
-    </li>
-  </ul>
-</div>
-
+        <ul>
+          <li>Assisted in managing and updating company trackers to support daily operations.</li>
+          <li>Handled website updates and maintenance using <b>WordPress.</b></li>
+          <li>Provided IT support by troubleshooting software, hardware, and network issues.</li>
+          <li>Collaborated with staff to improve system efficiency and ensure smooth operations.</li>
+        </ul>
+      </div>
     </div>
 
   </div>
 </section>
+
     
 <!-- PROJECTS -->
 <section id="projects" class="card projects-section" >
@@ -318,6 +333,20 @@
       </div>
     </div>
       
+    <!-- VA MASTERS -->
+    <div class="project-card">
+      <img src="images/vamasters.png" alt="VA Masters Landing Page - My WordPress Version" class="project-image" />
+      <div class="project-content">
+        <h3>VA MASTERS</h3>
+        <p class="muted">
+          My own version of the VA Masters landing page, redesigned and developed in WordPress. 
+          This version features a clean, modern layout with improved user experience, responsive design, 
+          and easy content management for future updates.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> WordPress</p>
+      </div>
+    </div>
+      
     <!-- MediCore -->
     <div class="project-card">
       <img src="images/medicore.png" alt="MediCore App Prototype Screenshot" class="project-image" />
@@ -331,7 +360,41 @@
         <p class="tech"><strong>Technologies Used:</strong> Figma (UI/UX Design, Interactive Prototype)</p>
       </div>
     </div>
+      
+     <!-- Marci Metzger Homes Website -->
+    <div class="project-card">
+      <img src="images/marci.png" alt="Marci Metzger Homes Website Screenshot" class="project-image" />
+      <div class="project-content">
+        <h3>Marci Metzger Homes</h3>
+        <p class="muted">
+          A professional real estate website designed for Marci Metzger Homes to showcase property listings, 
+          highlight agent expertise, and provide clients with seamless navigation through services and contact pages. 
+          The website emphasizes a modern and elegant layout with a user-friendly design.
+          Visit the site at <a href="https://psydrian18.github.io/marci-metzger-homepage/" target="_blank">marcimetzgerhomes</a>.
+        </p>
+        <p class="tech"><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
 
+  </div>
+</section>
+      
+ <!-- PHOTO GALLERY -->
+<section id="gallery" class="card gallery-section" style="margin-bottom:30px;">
+  <h2 style="text-align:center; margin-bottom:16px;">Photo Gallery</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="images/marci2.png" alt="Gallery Photo 1">
+      <img src="images/urbanpages.png" alt="Gallery Photo 2">
+      <img src="images/mnl2.png" alt="Gallery Photo 3">
+      <img src="images/sweetea2.png" alt="Gallery Photo 4">
+      <img src="images/medicore2.png" alt="Gallery Photo 5">
+      <img src="images/vamasters.png" alt="Gallery Photo 5">
+    </div>
+
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
 
@@ -344,7 +407,7 @@
     <div class="education-card" style="background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent); padding:16px; border-radius:var(--radius); text-align:center;">
       <img src="images/aisat-logo.png" alt="AISAT Logo" style="width:100px; height:60px; object-fit:contain; margin-bottom:12px;">
       <h3 style="margin-top:0; margin-bottom:6px;">Bachelor of Science in Computer Science</h3>
-      <p class="school" style="font-size:14px; margin:4px 0;">Asian Institute of Science and Technology (AISAT), City of Dasmariñas, Cavite</p>
+      <p class="school" style="font-size:14px; margin:4px 0;">Asian Institute of Science and Technology, City of Dasmariñas, Cavite</p>
       <p class="years" style="font-size:13px; color:var(--muted);">2021 – 2025</p>
     </div>
 
@@ -403,4 +466,3 @@
 
 
           
-
