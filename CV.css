@@ -37,7 +37,7 @@ nav a:hover { color: #fff; }
 .hero { display: grid; grid-template-columns: 1fr 360px; gap: 24px; margin-bottom: 28px; }
 .card { background: var(--card); border-radius: var(--radius); padding: 20px; }
 
-.intro h1 { margin: 0 0 8px 0; font-size: clamp(20px,3.6vw,34px); }
+.intro h1 { margin: 0 0 8px 0; font-size: clamp(20px,3.6vw,34px); text-align: center; margin-top: 5%; margin-bottom: 3%;}
 .intro p { color: var(--muted); margin: 0 0 12px 0; }
 
 .badges { display: flex; gap: 8px; flex-wrap: wrap; }
