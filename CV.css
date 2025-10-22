@@ -4,7 +4,7 @@
   --muted:#94a3b8;
   --accent:#06b6d4; /* teal */
   --glass: rgba(255,255,255,0.03);
-  --maxw:1450px;
+  --maxw:1400px;
   --radius:12px;
   color-scheme: dark;
 }
@@ -740,5 +740,6 @@ nav .cta:hover {
     justify-content: center;
   }
 }
+
 
 
