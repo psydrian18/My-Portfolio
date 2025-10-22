@@ -25,6 +25,7 @@ header {
   backdrop-filter: blur(6px);
 }
 
+
 .brand { display: flex; gap: 12px; align-items: center; }
 .logo { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg,var(--accent),#7c3aed); display: flex; align-items: center; justify-content: center; font-weight: 700; }
 
@@ -100,7 +101,7 @@ nav a:hover { color: #fff; }
 
 /* IMAGE */
 .experience-image img {
-  width: 200px;
+  width: 250px;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
@@ -740,6 +741,5 @@ nav .cta:hover {
     justify-content: center;
   }
 }
-
 
 
