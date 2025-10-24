@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris Adrian Cuenca — Portfolio</title>
+  <meta name="description" content="Portfolio of a Computer Science graduate — projects, skills, contact." />
+  <link rel="stylesheet" href="CV.css">
+</head>
+<script>
+
+// Show/hide the Back to Top button when scrolling
+  const backToTop = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  });
+// MY WORKS SLIDER
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".slider-track");
+  const images = Array.from(track.children);
+  const nextBtn = document.querySelector(".slide-btn.next");
+  const prevBtn = document.querySelector(".slide-btn.prev");
+
+  let index = 0;
+  let autoSlide;
+
+  // Set each image width equal to the container width
+  function setSlideWidth() {
+    const containerWidth = track.parentElement.clientWidth;
+    images.forEach(img => {
+      img.style.minWidth = `${containerWidth}px`;
+      img.style.maxWidth = `${containerWidth}px`;
+    });
+  }
+
+  // Update slide position
+  function updateSlide() {
+    track.style.transition = "transform 0.5s ease-in-out";
+    track.style.transform = `translateX(${-index * track.parentElement.clientWidth}px)`;
+  }
+
+  // Next & Prev buttons
+  function nextSlide() {
+    index++;
+    if (index >= images.length) index = 0;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    index--;
+    if (index < 0) index = images.length - 1;
+    updateSlide();
+  }
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Auto slide
+  function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(autoSlide);
+  }
+
+  // Pause on hover
+  track.parentElement.addEventListener("mouseenter", stopAutoSlide);
+  track.parentElement.addEventListener("mouseleave", startAutoSlide);
+
+  // Resize handling
+  window.addEventListener("resize", () => {
+    setSlideWidth();
+    updateSlide();
+  });
+
+  setSlideWidth();
+  startAutoSlide();
+});
+</script>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <a href="CV.html" class="logo">IAN</a>
+        <div>
+          <div style="font-weight:700">Chris Adrian Cuenca</div>
+          <div class="small muted">Web Developer & Graphic Designer</div>
+        </div>
+      </div>
+
+      <nav>
+          <a href="CV.html">Home</a>
+          
+        </nav>
+    </header>
+
+<!-- CONTENT -->
+<section id="myworks" class="myworks-section">
+  <h2>My Works</h2>
+
+  <div class="slider-wrapper">
+    <button class="slide-btn prev">&#10094;</button>
+
+    <div class="slider-container">
+      <div class="slider-track">
+        <img src="images/work1.jpg" alt="Design work 1">
+        <img src="images/work2.jpg" alt="Design work 2">
+        <img src="images/work3.jpg" alt="Design work 3">
+        <img src="images/work4.jpg" alt="Design work 4">
+        <img src="images/work5.jpg" alt="Design work 5">
+      </div>
+    </div>
+
+    <button class="slide-btn next">&#10095;</button>
+  </div>
+</section>
+
+<!-- IMAGE GALLERY COLLAGE -->
+<section id="gallery" class="gallery-section">
+  <h2>Gallery</h2>
+
+  <div class="gallery-grid">
+    <div class="gallery-item tall"><img src="images/gallery1.jpg" alt="Gallery 1"></div>
+    <div class="gallery-item"><img src="images/gallery2.jpg" alt="Gallery 2"></div>
+    <div class="gallery-item wide"><img src="images/gallery3.jpg" alt="Gallery 3"></div>
+    <div class="gallery-item"><img src="images/gallery4.png" alt="Gallery 4"></div>
+    <div class="gallery-item tall"><img src="images/gallery5.png" alt="Gallery 5"></div>
+    <div class="gallery-item"><img src="images/gallery6.png" alt="Gallery 6"></div>
+    <div class="gallery-item wide"><img src="images/gallery7.png" alt="Gallery 7"></div>
+    <div class="gallery-item"><img src="images/gallery8.png" alt="Gallery 8"></div>
+    <div class="gallery-item tall"><img src="images/gallery17.png" alt="Gallery 9"></div>
+    <div class="gallery-item"><img src="images/gallery10.png" alt="Gallery 10"></div>
+    <div class="gallery-item wide"><img src="images/gallery11.png" alt="Gallery 11"></div>
+    <div class="gallery-item tall"><img src="images/gallery13.png" alt="Gallery 12"></div>
+    <div class="gallery-item"><img src="images/gallery14.png" alt="Gallery 13"></div>
+    <div class="gallery-item wide"><img src="images/gallery15.png" alt="Gallery 14"></div>
+    <div class="gallery-item tall"><img src="images/gallery16.png" alt="Gallery 15"></div>
+  </div>
+</section>   
+    </div>
+<!-- Back to Top Button -->
+<a href="#" id="backToTop">
+  <img src="images/backtop.gif" alt="Back to Top" />
+</a>
+</body>
+
+<footer id="contact" class="footer-section">
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>Contact Me</h3>
+      <p class="muted">
+        I’m open to job opportunities where I can apply my skills and continue growing.
+        Feel free to reach out through the details.
+      </p>
+    </div>
+
+    <div class="footer-right">
+      <div class="footer-info">
+        <div><strong>Email:</strong> <a href="mailto:iancuenca94@gmail.com" class="external">iancuenca94@gmail.com</a></div>
+        <div><strong>Phone:</strong> +63 947 177 9943</div>
+        <div><strong>Location:</strong> Bacoor City, Cavite, Philippines</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Chris Adrian Cuenca. All rights reserved.</p>
+  </div>
+</footer>
+      
+
+
+
+          
